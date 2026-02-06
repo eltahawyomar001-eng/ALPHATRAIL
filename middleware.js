@@ -1,11 +1,9 @@
-import { NextResponse } from 'next/server';
-
-export function middleware(request) {
-  const { pathname } = request.nextUrl;
+export default function middleware(request) {
+  const { pathname } = new URL(request.url);
   
   // Only redirect from root path
   if (pathname !== '/') {
-    return NextResponse.next();
+    return;
   }
   
   const supported = ['de', 'en', 'it', 'fr', 'es', 'nl', 'da', 'no', 'sv', 'fi', 'pl', 'cs', 'hu'];
@@ -14,7 +12,6 @@ export function middleware(request) {
   const acceptLanguage = request.headers.get('accept-language') || 'en';
   
   // Parse the Accept-Language header (e.g., "de-DE,de;q=0.9,en;q=0.8")
-  // Extract the primary language
   const languages = acceptLanguage
     .split(',')
     .map(lang => {
@@ -28,10 +25,10 @@ export function middleware(request) {
   const targetLang = languages.find(lang => supported.includes(lang.code))?.code || 'en';
   
   // Redirect to language-specific page
-  const url = request.nextUrl.clone();
+  const url = new URL(request.url);
   url.pathname = `/${targetLang}/`;
   
-  return NextResponse.redirect(url);
+  return Response.redirect(url, 302);
 }
 
 export const config = {
