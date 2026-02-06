@@ -1,10 +1,4 @@
 {
-  "rewrites": [
-    {
-      "source": "/(de|en|it|fr|es|nl|da|no|sv|fi|pl|cs|hu)",
-      "destination": "/$1/index.html"
-    }
-  ],
   "cleanUrls": true,
   "trailingSlash": false
 }
