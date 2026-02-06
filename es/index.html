@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Alphatrail - Deine Bewertung zählt!">
+  <title>Alphatrail</title>
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+  <!-- Header with Logo -->
+  <header class="header">
+    <div class="container">
+      <svg class="logo" viewBox="0 0 500 90" xmlns="http://www.w3.org/2000/svg" aria-label="Alphatrail">
+        <defs>
+          <style>
+            .logo-text { 
+              font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; 
+              font-weight: 900; 
+              letter-spacing: 0.02em;
+            }
+          </style>
+        </defs>
+        <text x="250" y="60" class="logo-text" font-size="56" text-anchor="middle" fill="#000">ALPHATRAIL</text>
+      </svg>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main">
+    <div class="container">
+      <section class="hero">
+        <h1 class="hero__title" data-i18n="heroTitle">DEINE BEWERTUNG ZÄHLT!</h1>
+        <p class="hero__subtitle" data-i18n="heroSubtitle">Lass uns wissen, was du denkst</p>
+        
+        <!-- CTA Buttons -->
+        <div class="cta-container">
+          <a href="https://www.amazon.de/dp/B0EXAMPLE" 
+             rel="noreferrer noopener nofollow" 
+             target="_blank" 
+             class="btn btn-black"
+             data-i18n="ctaAmazon">
+            BEI AMAZON
+          </a>
+          <a href="https://alphatrail.example/shop" 
+             rel="noopener" 
+             target="_blank" 
+             class="btn btn-white"
+             data-i18n="ctaWebshop">
+            IM WEBSHOP
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer with Tandem Bike Illustration -->
+  <footer class="footer">
+    <svg class="footer__illustration" viewBox="0 0 1200 220" xmlns="http://www.w3.org/2000/svg" aria-label="Tandem bike illustration">
+      <defs>
+        <style>
+          .bike-line { 
+            stroke: #000; 
+            fill: none; 
+            stroke-width: 2.5; 
+            stroke-linecap: round; 
+            stroke-linejoin: round;
+          }
+          .bike-wheel { 
+            stroke: #000; 
+            fill: none; 
+            stroke-width: 3;
+          }
+          .bike-spoke { 
+            stroke: #000; 
+            stroke-width: 1.5; 
+            opacity: 0.7;
+          }
+        </style>
+      </defs>
+      
+      <!-- Ground line -->
+      <line x1="0" y1="190" x2="1200" y2="190" stroke="#000" stroke-width="1" opacity="0.2"/>
+      
+      <!-- Rear wheel with detailed spokes -->
+      <g class="wheel-rear">
+        <circle cx="220" cy="150" r="50" class="bike-wheel"/>
+        <circle cx="220" cy="150" r="6" fill="#000"/>
+        <!-- Spokes in radial pattern -->
+        <g class="bike-spoke">
+          <line x1="220" y1="150" x2="220" y2="100"/>
+          <line x1="220" y1="150" x2="270" y2="150"/>
+          <line x1="220" y1="150" x2="220" y2="200"/>
+          <line x1="220" y1="150" x2="170" y2="150"/>
+          <line x1="220" y1="150" x2="255.5" y2="114.5"/>
+          <line x1="220" y1="150" x2="255.5" y2="185.5"/>
+          <line x1="220" y1="150" x2="184.5" y2="185.5"/>
+          <line x1="220" y1="150" x2="184.5" y2="114.5"/>
+        </g>
+      </g>
+      
+      <!-- Front wheel with detailed spokes -->
+      <g class="wheel-front">
+        <circle cx="980" cy="150" r="50" class="bike-wheel"/>
+        <circle cx="980" cy="150" r="6" fill="#000"/>
+        <!-- Spokes in radial pattern -->
+        <g class="bike-spoke">
+          <line x1="980" y1="150" x2="980" y2="100"/>
+          <line x1="980" y1="150" x2="1030" y2="150"/>
+          <line x1="980" y1="150" x2="980" y2="200"/>
+          <line x1="980" y1="150" x2="930" y2="150"/>
+          <line x1="980" y1="150" x2="1015.5" y2="114.5"/>
+          <line x1="980" y1="150" x2="1015.5" y2="185.5"/>
+          <line x1="980" y1="150" x2="944.5" y2="185.5"/>
+          <line x1="980" y1="150" x2="944.5" y2="114.5"/>
+        </g>
+      </g>
+      
+      <!-- Bike frame -->
+      <g class="bike-line">
+        <!-- Rear triangle -->
+        <polyline points="220,150 300,70 440,70 540,150 220,150"/>
+        <line x1="300" y1="70" x2="300" y2="150"/>
+        <line x1="440" y1="70" x2="540" y2="150"/>
+        
+        <!-- Middle section -->
+        <line x1="540" y1="150" x2="660" y2="150"/>
+        
+        <!-- Front triangle -->
+        <polyline points="660,150 740,70 880,70 980,150"/>
+        <line x1="740" y1="70" x2="740" y2="150"/>
+        <line x1="880" y1="70" x2="980" y2="150"/>
+        <line x1="660" y1="150" x2="980" y2="150"/>
+      </g>
+      
+      <!-- Seats with better design -->
+      <g class="bike-line">
+        <ellipse cx="280" cy="60" rx="35" ry="8" fill="#000"/>
+        <ellipse cx="720" cy="60" rx="35" ry="8" fill="#000"/>
+      </g>
+      
+      <!-- Handlebars -->
+      <g class="bike-line">
+        <path d="M 300 70 L 300 45 Q 300 40 305 40 L 320 40"/>
+        <path d="M 300 45 Q 300 40 295 40 L 280 40"/>
+        <path d="M 740 70 L 740 45 Q 740 40 745 40 L 760 40"/>
+        <path d="M 740 45 Q 740 40 735 40 L 720 40"/>
+      </g>
+      
+      <!-- Pedals and cranks with better detail -->
+      <g class="bike-line">
+        <circle cx="300" cy="150" r="18"/>
+        <line x1="288" y1="150" x2="312" y2="150" stroke-width="3"/>
+        <circle cx="740" cy="150" r="18"/>
+        <line x1="728" y1="150" x2="752" y2="150" stroke-width="3"/>
+      </g>
+      
+      <!-- Riders (improved stick figures) -->
+      <!-- Rear rider -->
+      <g class="bike-line">
+        <circle cx="300" cy="25" r="14"/>
+        <line x1="300" y1="39" x2="300" y2="70"/>
+        <!-- Arms -->
+        <path d="M 280 50 L 300 39 L 320 50"/>
+        <!-- Legs -->
+        <line x1="300" y1="70" x2="282" y2="100"/>
+        <line x1="300" y1="70" x2="318" y2="100"/>
+        <line x1="282" y1="100" x2="290" y2="140"/>
+        <line x1="318" y1="100" x2="310" y2="140"/>
+      </g>
+      
+      <!-- Front rider -->
+      <g class="bike-line">
+        <circle cx="740" cy="25" r="14"/>
+        <line x1="740" y1="39" x2="740" y2="70"/>
+        <!-- Arms -->
+        <path d="M 720 50 L 740 39 L 760 50"/>
+        <!-- Legs -->
+        <line x1="740" y1="70" x2="722" y2="100"/>
+        <line x1="740" y1="70" x2="758" y2="100"/>
+        <line x1="722" y1="100" x2="730" y2="140"/>
+        <line x1="758" y1="100" x2="750" y2="140"/>
+      </g>
+      
+      <!-- Middle passengers (cleaner design) -->
+      <g class="bike-line">
+        <!-- Passenger 1 -->
+        <circle cx="440" cy="40" r="11"/>
+        <line x1="440" y1="51" x2="440" y2="70"/>
+        <path d="M 427 58 L 440 51 L 453 58"/>
+        
+        <!-- Passenger 2 -->
+        <circle cx="540" cy="40" r="11"/>
+        <line x1="540" y1="51" x2="540" y2="70"/>
+        <path d="M 527 58 L 540 51 L 553 58"/>
+        
+        <!-- Passenger 3 -->
+        <circle cx="880" cy="40" r="11"/>
+        <line x1="880" y1="51" x2="880" y2="70"/>
+        <path d="M 867 58 L 880 51 L 893 58"/>
+      </g>
+    </svg>
+    
+    <div class="footer__bar">
+      <div class="container">
+        <ul class="footer__links">
+          <li><a href="/impressum" class="footer__link" data-i18n="footerImprint">Impressum</a></li>
+          <li><a href="/datenschutz" class="footer__link" data-i18n="footerPrivacy">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Translation Engine -->
+  <script src="../js/translate.js"></script>
+</body>
+</html>

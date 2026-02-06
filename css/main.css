@@ -1,0 +1,392 @@
+/**
+ * Alphatrail Landing Page - Professional Grade CSS
+ * Mobile-first, performance-optimized, crafted by senior frontend team
+ */
+
+/* CSS Variables for brand colors and design tokens */
+:root {
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-gray-100: #F8F9FA;
+  --color-gray-200: #E9ECEF;
+  --color-gray-300: #DEE2E6;
+  --color-gray-800: #1A1A1A;
+  --color-gray-900: #0D0D0D;
+  
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+  
+  --max-width: 1200px;
+  --container-padding: clamp(1.5rem, 5vw, 3rem);
+  
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Modern CSS Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-black);
+  background-color: var(--color-white);
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Container with fluid padding */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+/* Header - Professional spacing and hover effects */
+.header {
+  padding: clamp(2rem, 5vh, 4rem) 0 clamp(1.5rem, 3vh, 2.5rem);
+  text-align: center;
+  position: relative;
+  animation: fadeInDown var(--transition-slow) ease-out;
+}
+
+.logo {
+  width: 100%;
+  max-width: clamp(280px, 40vw, 380px);
+  height: auto;
+  transition: transform var(--transition-base), opacity var(--transition-base);
+}
+
+.logo:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Main content area - Enhanced spacing and animations */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(3rem, 8vh, 6rem) 0;
+  text-align: center;
+  animation: fadeIn var(--transition-slow) ease-out 0.2s both;
+}
+
+/* Hero section - Typography excellence */
+.hero {
+  max-width: 900px;
+  margin: 0 auto;
+  animation: fadeInUp var(--transition-slow) ease-out 0.3s both;
+}
+
+.hero__title {
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  font-weight: var(--font-weight-black);
+  font-style: italic;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: clamp(1rem, 3vh, 2rem);
+  letter-spacing: -0.03em;
+  word-spacing: 0.05em;
+  position: relative;
+  animation: slideInLeft var(--transition-slow) ease-out 0.4s both;
+}
+
+.hero__subtitle {
+  font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+  font-weight: var(--font-weight-normal);
+  margin-bottom: clamp(2rem, 5vh, 3rem);
+  color: var(--color-black);
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.85;
+  animation: fadeIn var(--transition-slow) ease-out 0.5s both;
+}
+
+/* CTA Buttons - Premium button design */
+.cta-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: center;
+  margin: clamp(2.5rem, 5vh, 4rem) 0;
+  animation: fadeInUp var(--transition-slow) ease-out 0.6s both;
+}
+
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.125rem 3rem;
+  font-size: 1rem;
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 0;
+  transition: all var(--transition-base);
+  cursor: pointer;
+  border: 2px solid var(--color-black);
+  min-width: 280px;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-black);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-base);
+  z-index: -1;
+}
+
+.btn-black {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-black::before {
+  background: var(--color-gray-800);
+}
+
+.btn-black:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+}
+
+.btn-black:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-white {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-white:hover {
+  background-color: var(--color-gray-100);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-white:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Footer - Professional finish */
+.footer {
+  margin-top: auto;
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-gray-200);
+  animation: fadeIn var(--transition-slow) ease-out 0.7s both;
+}
+
+.footer__illustration {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  padding: clamp(2rem, 4vh, 3rem) var(--container-padding);
+  transition: opacity var(--transition-base);
+}
+
+.footer__illustration:hover {
+  opacity: 0.85;
+}
+
+.footer__bar {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 1.75rem 0;
+  text-align: center;
+}
+
+.footer__links {
+  display: flex;
+  justify-content: center;
+  gap: clamp(2rem, 5vw, 3rem);
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.footer__link {
+  position: relative;
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.02em;
+  transition: opacity var(--transition-fast);
+  padding: 0.25rem 0;
+}
+
+.footer__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--color-white);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--transition-base);
+}
+
+.footer__link:hover {
+  opacity: 1;
+}
+
+.footer__link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive design - Mobile first approach */
+@media (min-width: 640px) {
+  .cta-container {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .btn {
+    min-width: 260px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cta-container {
+    gap: 2rem;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Loading state with elegant animation */
+[data-i18n]:empty::after {
+  content: '...';
+  opacity: 0.3;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Focus styles for accessibility */
+.btn:focus-visible {
+  outline: 2px solid var(--color-black);
+  outline-offset: 4px;
+}
+
+.footer__link:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 4px;
+}

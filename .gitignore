@@ -1,0 +1,25 @@
+# Documentation files (internal use only)
+DEPLOYMENT.md
+DESIGN_AUDIT.md
+PROJECT_COMPLETE.md
+PROPOSAL_DEMO.md
+REDESIGN_SUMMARY.md
+
+# Demo/showcase files
+PROJECT_INDEX.html
+IMPROVEMENTS.html
+
+# Development files
+serve.sh
+.DS_Store
+*.log
+
+# Editor directories
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+Thumbs.db
