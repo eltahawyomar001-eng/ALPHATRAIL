@@ -1,17 +1,10 @@
 {
-  "routes": [
+  "rewrites": [
     {
-      "src": "^/$",
-      "dest": "/index.html"
-    },
-    {
-      "src": "^/(de|en|it|fr|es|nl|da|no|sv|fi|pl|cs|hu)/?$",
-      "dest": "/$1/index.html"
-    },
-    {
-      "src": "^/(de|en|it|fr|es|nl|da|no|sv|fi|pl|cs|hu)/(.*)$",
-      "dest": "/$1/$2"
+      "source": "/(de|en|it|fr|es|nl|da|no|sv|fi|pl|cs|hu)",
+      "destination": "/$1/index.html"
     }
   ],
+  "cleanUrls": true,
   "trailingSlash": false
 }
