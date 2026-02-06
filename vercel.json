@@ -1,0 +1,17 @@
+{
+  "routes": [
+    {
+      "src": "^/$",
+      "dest": "/index.html"
+    },
+    {
+      "src": "^/(de|en|it|fr|es|nl|da|no|sv|fi|pl|cs|hu)/?$",
+      "dest": "/$1/index.html"
+    },
+    {
+      "src": "^/(de|en|it|fr|es|nl|da|no|sv|fi|pl|cs|hu)/(.*)$",
+      "dest": "/$1/$2"
+    }
+  ],
+  "trailingSlash": false
+}

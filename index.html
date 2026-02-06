@@ -9,8 +9,27 @@
     // Instant language detection and redirect - prevents flash of content
     (function() {
       const supported = ['de', 'en', 'it', 'fr', 'es', 'nl', 'da', 'no', 'sv', 'fi', 'pl', 'cs', 'hu'];
-      const lang = navigator.language.split('-')[0];
+      
+      // Get browser language with fallback chain
+      const browserLang = (
+        navigator.language || 
+        navigator.userLanguage || 
+        navigator.browserLanguage || 
+        'en'
+      ).toLowerCase();
+      
+      // Extract primary language code (e.g., 'de' from 'de-DE')
+      const lang = browserLang.split('-')[0];
+      
+      // Select target language
       const target = supported.includes(lang) ? lang : 'en';
+      
+      // Debug info (remove after testing)
+      console.log('Browser language:', browserLang);
+      console.log('Detected language:', lang);
+      console.log('Target language:', target);
+      
+      // Redirect
       window.location.replace(`/${target}/`);
     })();
   </script>
